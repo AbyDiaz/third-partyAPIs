@@ -63,6 +63,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  height: 75px;
 }
 
 .saveBtn i:hover {
@@ -77,6 +78,5 @@ li {
 
 ion-icon {
   font-size: 32px;
-  margin: auto;
-  padding: 3px;
+  display: block;
 }
