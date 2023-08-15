@@ -12,71 +12,99 @@
   </head>
 
   <body>
-    
+
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
 
+        <!-- Button trigger modal -->
+ <!--  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+  </button> -->
+
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        this is the text for the body
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+  </div> -->
+
     <div class="container text-center">
       <!-- time blocks -->
       <div class="row">
         <h3 class="col hour">9am</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
-        <button class="saveBtn col"></button>
+        <ul id="num-one" class="time-txt col-sm-9 p-3 "></ul>
+        <button class="saveBtn col">
+          <ion-icon name="save-outline"></ion-icon>
+        </button>
       </div>
 
       <div class="row">
         <h3 class="col hour">10am</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-two" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">11am</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-three" class="time-txt col-sm-9 p-3"></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">12pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-four" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">1pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-five" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">2pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-six" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">3pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-seven" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">4pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-eight" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
       <div class="row">
         <h3 class="col hour">5pm</h3>
-        <ul class="col-sm-9 p-3 textarea"></ul>
+        <ul id="num-nine" class="time-txt col-sm-9 p-3 "></ul>
         <button class="saveBtn col"></button>
       </div>
 
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/dayjs.min.js'></script>
     <script src="./script.js"></script>
