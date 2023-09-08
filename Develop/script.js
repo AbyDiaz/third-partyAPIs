@@ -5,7 +5,7 @@ $('#currentDay').html(now);
 var tasks = [];
 
 // time block was clicked and wants to be edited
-$(".time-txt").on("click",  function() {
+$("ul").on("click",  function() {
     var text = $(this)
     .text()
     .trim();
@@ -16,42 +16,16 @@ $(".time-txt").on("click",  function() {
     // auto focus new element 
     $(this).replaceWith(textInput);
     textInput.trigger("focus");
+
+
+    auditTask(textInput);
+
 });
+
 
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-};
-
-
-
-// editable field was unfocused 
-$(".time-txt").on("blur", "textarea", function() {
-    // get textarea current value/text
-    var text = $(this)
-    .val()
-    .trim();
-
-    // get status type and postion in list
-    var status = $(this)
-    .closest(".hour")
-    .attr("id")
-    // chaining with attr, which returns the id, so list- followed by the category
-    .replace("num-", "");
-    // onced chained .replace will remove list- from the txt which will give the category name
-
-    // get tasks position in teh list of other li elements 
-    var index = $(this)
-    .closest(".time-txt")
-    .index();
-
-    // update tasks in array and re-scave to local storage
-    tasks[status][index].text = text;
-
-    saveTasks();
-
-    
-}); 
-
+};  
 
 // save button clicked 
 $(".saveBtn").on("click",  function() {
@@ -82,6 +56,19 @@ $(".saveBtn").on("click",  function() {
         saveTasks();
     }
 });
+
+var auditTask = function (taskEl) {
+    // get time from task element
+    var date = $(taskEl)
+    .closest('.hour');
+    console.log(date);
+
+    var time = dayjs().hour();
+    console.log(time);
+};
+
+
+  
 
 var loadTasks = function() {
     tasks = JSON.parse(localStorage.getItem("tasks"));
